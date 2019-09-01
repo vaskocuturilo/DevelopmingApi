@@ -47,9 +47,27 @@ public class SearchApiBuilder {
     public SearchApiBuilder setIsPublisherId(String isPublisherId) {
         this.isPublisherId = isPublisherId;
         this.searchApiMap.put(LS_PUBLISHER_ID.getParameter(), isPublisherId);
+
         return this;
     }
 
+    /**
+     * Setter setCategoryId.
+     *
+     * @param categoryId this is categoryId.
+     * @return this.
+     */
+    public SearchApiBuilder setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        this.searchApiMap.put(CATEGORY_ID.getParameter(), categoryId);
+
+        return this;
+    }
+
+
+    /**
+     * Builder build.
+     */
     public SearchApi build() {
         return new SearchApi(
                 apiKey,

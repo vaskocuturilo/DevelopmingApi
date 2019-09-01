@@ -7,7 +7,7 @@ You will need the following technologies available to try it out:
 * IDE of your choice 
 * Web browser Chrome
 
-### Ho w to run
+### How to run
 
 ```gradle clean test```
 
