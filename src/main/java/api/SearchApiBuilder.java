@@ -1,7 +1,6 @@
 package api;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static api.schema.Parameters.*;
 
@@ -12,7 +11,7 @@ public class SearchApiBuilder {
 
     private final String apiKey;
     private final String query;
-    private String isPublisherId;
+    private String publisherId;
     private String categoryId;
     private String start;
     private String sort;
@@ -23,15 +22,16 @@ public class SearchApiBuilder {
     private String facet;
     private String facetFilter;
     private String facetRange;
-    private Map<String, String> searchApiMap = new HashMap<>();
+    private ConcurrentHashMap<String, String> searchApiMap = new ConcurrentHashMap<>();
 
     /**
      * Instantiates a new Search api builder.
+     * For parameters API_KEY and QUERY.
      *
      * @param apiKey the api key
      * @param query  the query
      */
-    public SearchApiBuilder(String apiKey, String query) {
+    public SearchApiBuilder(final String apiKey, final String query) {
         this.apiKey = apiKey;
         this.searchApiMap.put(API_KEY.getParameter(), apiKey);
         this.query = query;
@@ -39,31 +39,59 @@ public class SearchApiBuilder {
     }
 
     /**
-     * Setter setIsPublisherId.
+     * Setter setPublisherId.
+     * For parameters LS_PUBLISHER_ID.
      *
-     * @param isPublisherId this isPublisherId.
+     * @param publisherId this publisherId.
      * @return this.
      */
-    public SearchApiBuilder setIsPublisherId(String isPublisherId) {
-        this.isPublisherId = isPublisherId;
-        this.searchApiMap.put(LS_PUBLISHER_ID.getParameter(), isPublisherId);
+    public SearchApiBuilder setPublisherId(final String publisherId) {
+        this.publisherId = publisherId;
+        this.searchApiMap.put(LS_PUBLISHER_ID.getParameter(), publisherId);
 
         return this;
     }
 
     /**
      * Setter setCategoryId.
+     * For parameters CATEGORY_ID.
      *
      * @param categoryId this is categoryId.
      * @return this.
      */
-    public SearchApiBuilder setCategoryId(String categoryId) {
+    public SearchApiBuilder setCategoryId(final String categoryId) {
         this.categoryId = categoryId;
         this.searchApiMap.put(CATEGORY_ID.getParameter(), categoryId);
 
         return this;
     }
 
+    /**
+     * Setter setStart.
+     * For parameters START.
+     *
+     * @param start this is start.
+     * @return this.
+     */
+    public SearchApiBuilder setStart(final String start) {
+        this.start = start;
+        this.searchApiMap.put(START.getParameter(), start);
+        return this;
+    }
+
+    /**
+     * Setter setStart.
+     * For parameters SORT.
+     *
+     * @param sort this is sort.
+     * @return this.
+     */
+    public SearchApiBuilder setSort(final String sort) {
+        this.sort = sort;
+        this.searchApiMap.put(SORT.getParameter(), sort);
+
+        return this;
+    }
 
     /**
      * Builder build.
@@ -72,7 +100,7 @@ public class SearchApiBuilder {
         return new SearchApi(
                 apiKey,
                 query,
-                isPublisherId,
+                publisherId,
                 categoryId,
                 start,
                 sort,
