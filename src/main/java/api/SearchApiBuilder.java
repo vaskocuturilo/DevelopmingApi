@@ -3,8 +3,7 @@ package api;
 import java.util.HashMap;
 import java.util.Map;
 
-import static api.schema.Parameters.API_KEY;
-import static api.schema.Parameters.QUERY;
+import static api.schema.Parameters.*;
 
 /**
  * The type Search api builder.
@@ -38,4 +37,18 @@ public class SearchApiBuilder {
         this.query = query;
         this.searchApiMap.put(QUERY.getParameter(), query);
     }
+
+    /**
+     * Setter setIsPublisherId.
+     *
+     * @param isPublisherId this isPublisherId.
+     * @return this.
+     */
+    public SearchApiBuilder setIsPublisherId(String isPublisherId) {
+        this.isPublisherId = isPublisherId;
+        this.searchApiMap.put(LS_PUBLISHER_ID.getParameter(), isPublisherId);
+        return this;
+    }
+
+
 }
