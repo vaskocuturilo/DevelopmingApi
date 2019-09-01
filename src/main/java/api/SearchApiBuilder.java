@@ -50,5 +50,24 @@ public class SearchApiBuilder {
         return this;
     }
 
+    public SearchApi build() {
+        return new SearchApi(
+                apiKey,
+                query,
+                isPublisherId,
+                categoryId,
+                start,
+                sort,
+                order,
+                numItems,
+                format,
+                responseGroup,
+                facet,
+                facetFilter,
+                facetRange,
+                searchApiMap
+        );
+    }
+
 
 }
