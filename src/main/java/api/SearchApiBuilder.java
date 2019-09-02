@@ -135,6 +135,63 @@ public class SearchApiBuilder {
     }
 
     /**
+     * Setter setResponseGroup.
+     * For parameters RESPONSE_GROUP.
+     *
+     * @param responseGroup this is responseGroup.
+     * @return this.
+     */
+    public SearchApiBuilder setResponseGroup(String responseGroup) {
+        this.responseGroup = responseGroup;
+        this.searchApiMap.put(RESPONSE_GROUP.getParameter(), responseGroup);
+
+        return this;
+    }
+
+
+    /**
+     * Setter setFacet.
+     * For parameters FACET.
+     *
+     * @param facet this is facet.
+     * @return this.
+     */
+    public SearchApiBuilder setFacet(String facet) {
+        this.facet = facet;
+        this.searchApiMap.put(FACET.getParameter(), facet);
+
+        return this;
+    }
+
+    /**
+     * Setter setFacetFilter.
+     * For parameters FACET_FILTER.
+     *
+     * @param facetFilter this is facet filter.
+     * @return this.
+     */
+    public SearchApiBuilder setFacetFilter(String facetFilter) {
+        this.facetFilter = facetFilter;
+        this.searchApiMap.put(FACET_FILTER.getParameter(), facetFilter);
+
+        return this;
+    }
+
+    /**
+     * Setter setFacetRange.
+     * For parameters FACET_RANGE.
+     *
+     * @param facetRange this is facet facet range.
+     * @return this.
+     */
+    public SearchApiBuilder setFacetRange(String facetRange) {
+        this.facetRange = facetRange;
+        this.searchApiMap.put(FACET_RANGE.getParameter(), facetRange);
+
+        return this;
+    }
+
+    /**
      * Builder build.
      */
     public SearchApi build() {
