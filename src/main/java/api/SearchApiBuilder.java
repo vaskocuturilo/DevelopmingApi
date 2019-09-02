@@ -94,6 +94,47 @@ public class SearchApiBuilder {
     }
 
     /**
+     * Setter setOrder.
+     * For parameters ORDER.
+     *
+     * @param order this is order.
+     * @return this.
+     */
+    public SearchApiBuilder setOrder(String order) {
+        this.order = order;
+        this.searchApiMap.put(ORDER.getParameter(), order);
+        return this;
+    }
+
+    /**
+     * Setter setNumItems.
+     * For parameters NUMBER_OF_ITEMS.
+     *
+     * @param numItems this is numItems.
+     * @return this.
+     */
+    public SearchApiBuilder setNumItems(String numItems) {
+        this.numItems = numItems;
+        this.searchApiMap.put(NUMBER_OF_ITEMS.getParameter(), numItems);
+
+        return this;
+    }
+
+    /**
+     * Setter setFormat.
+     * For parameters FORMAT.
+     *
+     * @param format this is format.
+     * @return this.
+     */
+    public SearchApiBuilder setFormat(String format) {
+        this.format = format;
+        this.searchApiMap.put(FORMAT.getParameter(), format);
+
+        return this;
+    }
+
+    /**
      * Builder build.
      */
     public SearchApi build() {
@@ -114,6 +155,4 @@ public class SearchApiBuilder {
                 searchApiMap
         );
     }
-
-
 }
