@@ -2,7 +2,7 @@ package api;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-import static api.schema.Parameters.*;
+import static api.Parameters.*;
 
 /**
  * The type Search api builder.

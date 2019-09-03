@@ -1,4 +1,4 @@
-package api.schema;
+package api;
 
 
 /**
