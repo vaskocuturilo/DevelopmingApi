@@ -6,50 +6,50 @@ package api;
 public enum Values {
 
     /**
-     * Relevance values.
+     * Relevance value.
      */
     RELEVANCE("relevance"),
     /**
-     * Price values.
+     * Price value.
      */
     PRICE("price"),
     /**
-     * Title values.
+     * Title value.
      */
     TITLE("title"),
     /**
-     * Bestseller values.
+     * Bestseller value.
      */
     BESTSELLER("bestseller"),
     /**
-     * Custom rating values.
+     * Custom rating value.
      */
     CUSTOM_RATING("customerRating"),
     /**
-     * New values.
+     * New value.
      */
     NEW("new");
 
     /**
-     * private values.
+     * private value.
      */
-    private String values;
+    private String value;
 
     /**
      * Constructor Values.
      *
-     * @param values thi is values.
+     * @param value thi is value.
      */
-    Values(String values) {
-        this.values = values;
+    Values(final String value) {
+        this.value = value;
     }
 
     /**
-     * Method getValues.
+     * Method getValue.
      *
-     * @return the values
+     * @return the value
      */
-    public String getValues() {
-        return values;
+    public String getValue() {
+        return value;
     }
 }

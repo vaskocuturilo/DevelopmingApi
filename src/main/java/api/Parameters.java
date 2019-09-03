@@ -4,7 +4,7 @@ package api;
 /**
  * The enum Parameters.
  */
-public enum  Parameters {
+public enum Parameters {
     /**
      * Api key parameters.
      */
@@ -66,8 +66,10 @@ public enum  Parameters {
 
     /**
      * Default Constructor.
+     *
+     * @param parameter thi is parameter.
      */
-    Parameters(String parameter) {
+    Parameters(final String parameter) {
         this.parameter = parameter;
     }
 

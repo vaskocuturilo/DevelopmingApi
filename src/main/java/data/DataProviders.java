@@ -1,16 +1,19 @@
 package data;
 
 import api.SearchApiBuilder;
-import api.Values;
 import org.testng.annotations.DataProvider;
 import page.SortValues;
-
-import static api.Parameters.API_KEY;
 
 /**
  * The type Data providers.
  */
 public class DataProviders {
+
+    /**
+     * Constant API_KEY.
+     */
+    private static final String API_KEY = "bq3jse8evy2euc6hwqg4huya";
+
     /**
      * Search data object [ ] [ ].
      *
@@ -22,10 +25,11 @@ public class DataProviders {
                 new SearchApiBuilder(API_KEY, "Shell Scripting")
                         .setNumItems("3")
                         .build()
-                        .getSearchApiMap(), SortValues.NONE}, {
-                new SearchApiBuilder(API_KEY, "Shell Scripting")
+                        .getSearchApiMap(), SortValues.NONE},
+
+                {new SearchApiBuilder(API_KEY, "Shell Scripting")
                         .setNumItems("3")
-                        .setSort(Values.PRICE)
+                        .setSort("price")
                         .build()
                         .getSearchApiMap(), SortValues.PRICE_LOW}};
     }

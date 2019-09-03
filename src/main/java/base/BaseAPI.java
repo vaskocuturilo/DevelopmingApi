@@ -1,5 +1,6 @@
 package base;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -16,12 +17,12 @@ public class BaseAPI {
     /**
      * The Url string.
      */
-    String urlString = ResourceBundle.getBundle("test").getString("URL");
+    private String urlString = ResourceBundle.getBundle("test").getString("URL");
 
     /**
      * The Api key.
      */
-    String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
+    private String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
 
 
     /**
@@ -29,7 +30,7 @@ public class BaseAPI {
      */
     @BeforeTest
     public void startMethod() {
-
+        WebDriverManager.chromedriver().version("76.0.3809.68").setup();
         open(urlString);
     }
 

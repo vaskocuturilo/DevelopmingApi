@@ -5,7 +5,10 @@ import groovy.json.JsonException;
 import io.restassured.path.json.JsonPath;
 
 import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * The type Api json.
@@ -22,14 +25,14 @@ public class ApiJson {
      *
      * @param json the json
      */
-    public ApiJson(String json) {
+    public ApiJson(final String json) {
         this.json = json;
     }
 
     /**
      * Gets all items.
      *
-     * @return the all items
+     * @return the all items.
      */
     private List<Item> getAllItems() {
         try {
@@ -37,5 +40,25 @@ public class ApiJson {
         } catch (JsonException ex) {
             return Collections.EMPTY_LIST;
         }
+    }
+
+    /**
+     * Get Names.
+     *
+     * @return the all items.
+     */
+    public Set<String> getNames() {
+        return getAllItems().stream().map(Item::getName)
+                .collect(Collectors.toCollection(LinkedHashSet::new));
+    }
+
+    /**
+     * Get Prices.
+     *
+     * @return the all items.
+     */
+    public Set<Double> getPrices() {
+        return getAllItems().stream().map(Item::getSalePrice)
+                .collect(Collectors.toCollection(LinkedHashSet::new));
     }
 }
