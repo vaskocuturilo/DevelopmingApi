@@ -5,7 +5,6 @@ package api;
  * The enum Parameters.
  */
 public enum  Parameters {
-
     /**
      * Api key parameters.
      */

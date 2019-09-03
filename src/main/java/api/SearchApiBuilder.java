@@ -1,6 +1,7 @@
 package api;
 
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.HashMap;
+import java.util.Map;
 
 import static api.Parameters.*;
 
@@ -22,15 +23,13 @@ public class SearchApiBuilder {
     private String facet;
     private String facetFilter;
     private String facetRange;
-    private ConcurrentHashMap<String, String> searchApiMap = new ConcurrentHashMap<>();
+    private Map<String, String> searchApiMap = new HashMap<>();
 
     /**
      * Instantiates a new Search api builder.
      * For parameters API_KEY and QUERY.
-     *
-     * @param apiKey the api key
-     * @param query  the query
-     */
+     *  @param apiKey the api key
+     * @param query  the query*/
     public SearchApiBuilder(final String apiKey, final String query) {
         this.apiKey = apiKey;
         this.searchApiMap.put(API_KEY.getParameter(), apiKey);

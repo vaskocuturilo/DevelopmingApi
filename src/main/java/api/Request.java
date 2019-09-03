@@ -15,7 +15,7 @@ public class Request {
     /**
      * Constant API_URL.
      */
-    private static final String API_URL = ResourceBundle.getBundle("").getString("");
+    private static final String API_URL = ResourceBundle.getBundle("test").getString("API_URL");
 
     /**
      * Make request api json.

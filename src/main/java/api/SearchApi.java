@@ -1,7 +1,7 @@
 package api;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * The type Search api.
@@ -21,7 +21,7 @@ public class SearchApi {
     private final String facet;
     private final String facetFilter;
     private final String facetRange;
-    private ConcurrentHashMap<String, String> searchApiMap = new ConcurrentHashMap<>();
+    private Map<String, String> searchApiMap = new HashMap<>();
 
     /**
      * Instantiates a new Search api.
@@ -67,7 +67,8 @@ public class SearchApi {
      *
      * @return the search api map
      */
-    public ConcurrentHashMap<String, String> getSearchApiMap() {
+    public Map<String, String> getSearchApiMap() {
         return searchApiMap;
+
     }
 }

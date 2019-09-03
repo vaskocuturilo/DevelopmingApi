@@ -16,12 +16,12 @@ public class BaseAPI {
     /**
      * The Url string.
      */
-    String urlString = ResourceBundle.getBundle("").getString("");
+    String urlString = ResourceBundle.getBundle("test").getString("URL");
 
     /**
      * The Api key.
      */
-    String apiKey = ResourceBundle.getBundle("").getString("");
+    String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
 
 
     /**
