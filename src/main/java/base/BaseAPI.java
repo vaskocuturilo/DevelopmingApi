@@ -19,10 +19,6 @@ public class BaseAPI {
      */
     private String urlString = ResourceBundle.getBundle("test").getString("URL");
 
-    /**
-     * The Api key.
-     */
-    private String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
 
 
     /**

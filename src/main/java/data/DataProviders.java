@@ -4,30 +4,35 @@ import api.SearchApiBuilder;
 import org.testng.annotations.DataProvider;
 import page.SortValues;
 
+import java.util.ResourceBundle;
+
+
 /**
  * The type Data providers.
  */
 public class DataProviders {
 
     /**
-     * Constant API_KEY.
+     * The Api key.
      */
-    private static final String API_KEY = "bq3jse8evy2euc6hwqg4huya";
+    public String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
+
 
     /**
      * Search data object [ ] [ ].
      *
      * @return the object [ ] [ ]
      */
+
     @DataProvider
     public Object[][] insertSearchData() {
         return new Object[][]{{
-                new SearchApiBuilder(API_KEY, "Shell Scripting")
+                new SearchApiBuilder(apiKey, "Shell Scripting")
                         .setNumItems("3")
                         .build()
                         .getSearchApiMap(), SortValues.NONE},
 
-                {new SearchApiBuilder(API_KEY, "Shell Scripting")
+                {new SearchApiBuilder(apiKey, "Shell Scripting")
                         .setNumItems("3")
                         .setSort("price")
                         .build()

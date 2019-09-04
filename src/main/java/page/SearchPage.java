@@ -17,7 +17,7 @@ public class SearchPage {
     /**
      * Constant sortByIcon.
      */
-    private static String sortByIcon = "select[class='field-input.field-input--primary']";
+    private static String sortByIcon = "select[aria-label='Sort Filter']";
 
     /**
      * Constant DELAY.
@@ -65,6 +65,6 @@ public class SearchPage {
     @Step
     private void selectSortByOptionByName(final SortValues sortType) {
         $(sortByIcon).waitUntil(Condition.visible, DELAY).click();
-        $(sortByIcon).selectOptionContainingText(sortType.getValue());
+        $(sortByIcon).selectOption(sortType.getValue());
     }
 }
