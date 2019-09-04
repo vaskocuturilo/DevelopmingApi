@@ -51,7 +51,7 @@ public class SearchPage {
      * @return the search page.
      */
     public SearchPage selectSortBy(final SortValues sortType) {
-        if (!sortType.equals(SortValues.NONE)) {
+        if (!sortType.equals(SortValues.NEW)) {
             selectSortByOptionByName(sortType);
         }
         return this;
@@ -65,6 +65,6 @@ public class SearchPage {
     @Step
     private void selectSortByOptionByName(final SortValues sortType) {
         $(sortByIcon).waitUntil(Condition.visible, DELAY).click();
-        $(sortByIcon).selectOption(sortType.getValue());
+        $(sortByIcon).selectOptionContainingText(sortType.getValue());
     }
 }

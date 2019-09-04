@@ -30,12 +30,13 @@ public class DataProviders {
                 new SearchApiBuilder(apiKey, "Shell Scripting")
                         .setNumItems("3")
                         .build()
-                        .getSearchApiMap(), SortValues.NONE},
+                        .getSearchApiMap(), SortValues.NEW},
 
-                {new SearchApiBuilder(apiKey, "Shell Scripting")
+                {
+                    new SearchApiBuilder(apiKey, "Shell Scripting")
                         .setNumItems("3")
                         .setSort("price")
                         .build()
-                        .getSearchApiMap(), SortValues.PRICE_LOW}};
+                        .getSearchApiMap(), SortValues.RATING_HIGH}};
     }
 }

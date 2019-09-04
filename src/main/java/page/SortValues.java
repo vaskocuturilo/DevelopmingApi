@@ -9,27 +9,27 @@ public enum SortValues {
     /**
      * None sort values.
      */
-    NONE("none"),
+    NEW("New"),
     /**
      * Best match sort values.
      */
-    BEST_MATCH("best_match"),
+    BEST_MATCH("Best Match"),
     /**
      * Best sellers sort values.
      */
-    BEST_SELLERS("best_seller"),
+    BEST_SELLERS("Best Sellers"),
     /**
      * Price low sort values.
      */
-    PRICE_LOW("price_low"),
+    PRICE_LOW("Price: low to high"),
     /**
      * Price high sort values.
      */
-    PRICE_HIGH("price_high"),
+    PRICE_HIGH("Price: high to low"),
     /**
      * Rating high sort values.
      */
-    RATING_HIGH("rating_high");
+    RATING_HIGH("Highest Rating");
 
     /**
      * The private value.
