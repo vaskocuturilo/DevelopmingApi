@@ -1,6 +1,7 @@
 package page;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import io.qameta.allure.Step;
 
 import java.util.List;
@@ -8,16 +9,22 @@ import java.util.List;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-
 /**
  * The type Search page.
  */
 public class SearchPage {
 
     /**
-     * Constant sortByIcon.
+     * Value sortByIcon.
      */
     private static String sortByIcon = "select[aria-label='Sort Filter']";
+
+    /**
+     * Value productsName.
+     */
+    private static ElementsCollection
+            productsName = $$("a[class='product-title-link line-clamp line-clamp-2']"),
+            productsPrice = $$("span[class='product-variant-price']");
 
     /**
      * Constant DELAY.
@@ -31,7 +38,7 @@ public class SearchPage {
      * @return the product name for items range
      */
     public static List<String> getProductNameForItemsRange(final String number) {
-        return $$(".product-title-link.line-clamp.line-clamp-2").texts().subList(0, Integer.parseInt(number));
+        return productsName.texts().subList(0, Integer.parseInt(number));
     }
 
     /**
@@ -41,7 +48,7 @@ public class SearchPage {
      * @return the product price for items range
      */
     public static String getProductPriceForItemsRange(final String number) {
-        return $$(".product-variant-price").texts().subList(0, Integer.parseInt(number)).toString().replace("$", "");
+        return productsPrice.texts().subList(0, Integer.parseInt(number)).toString().replace("$", "");
     }
 
     /**
