@@ -31,7 +31,7 @@ public final class Request {
      * @return the api json
      */
     public static ApiJson makeRequest(final Map<String, String> query) {
-        String json = given()
+        final String json = given()
                 .params(query)
                 .log()
                 .all()

@@ -22,7 +22,7 @@ public class GiftOptions {
      * @param allowGiftReceipt
      * @param allowGiftWrap
      */
-    public GiftOptions(Boolean allowGiftWrap, Boolean allowGiftMessage, Boolean allowGiftReceipt) {
+    public GiftOptions(final Boolean allowGiftWrap, final Boolean allowGiftMessage, final Boolean allowGiftReceipt) {
         super();
         this.allowGiftWrap = allowGiftWrap;
         this.allowGiftMessage = allowGiftMessage;
@@ -33,7 +33,7 @@ public class GiftOptions {
         return allowGiftWrap;
     }
 
-    public void setAllowGiftWrap(Boolean allowGiftWrap) {
+    public void setAllowGiftWrap(final Boolean allowGiftWrap) {
         this.allowGiftWrap = allowGiftWrap;
     }
 
@@ -41,7 +41,7 @@ public class GiftOptions {
         return allowGiftMessage;
     }
 
-    public void setAllowGiftMessage(Boolean allowGiftMessage) {
+    public void setAllowGiftMessage(final Boolean allowGiftMessage) {
         this.allowGiftMessage = allowGiftMessage;
     }
 

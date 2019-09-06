@@ -20,7 +20,7 @@ import static page.SearchPage.getProductPriceForItemsRange;
 public class CheckResultTest extends BaseAPI {
 
     @Test(dataProvider = "insertSearchData", dataProviderClass = DataProviders.class)
-    @Story("Test")
+    @Story("The search example with api request.")
     public void searchWithApiRequest(Map<String, String> queryMap, SortValues sortValues) {
 
         ApiJson searchResultsApiJson = Request.makeRequest(queryMap);

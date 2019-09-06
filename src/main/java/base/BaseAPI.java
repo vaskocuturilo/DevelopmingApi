@@ -17,7 +17,7 @@ public class BaseAPI {
     /**
      * The Url string.
      */
-    private String urlString = ResourceBundle.getBundle("test").getString("URL");
+    private final transient String urlString = ResourceBundle.getBundle("test").getString("URL");
 
 
 
@@ -35,7 +35,7 @@ public class BaseAPI {
      * Tear down.
      */
     @AfterTest
-    public void tearDown() {
+    public void stopMethod() {
         clearBrowserCookies();
         close();
     }

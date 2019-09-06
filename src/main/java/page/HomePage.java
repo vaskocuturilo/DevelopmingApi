@@ -13,8 +13,13 @@ public class HomePage {
     /**
      * The private selenide element.
      */
-    private SelenideElement
-            headerSearchField = $("input[id='global-search-input']");
+    private final transient SelenideElement headerSearchField = $("input[id='global-search-input']");
+
+    public HomePage() {
+        super();
+        //empty
+        return;
+    }
 
     /**
      * Enter text to search field search page.

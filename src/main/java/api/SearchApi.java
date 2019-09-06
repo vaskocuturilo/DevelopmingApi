@@ -2,6 +2,7 @@ package api;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * The type Search api.
@@ -21,7 +22,7 @@ public class SearchApi {
     private final String facet;
     private final String facetFilter;
     private final String facetRange;
-    private Map<String, String> searchApiMap = new HashMap<>();
+    private ConcurrentHashMap<String, String> searchApiMap = new ConcurrentHashMap<>();
 
     /**
      * Instantiates a new Search api.
@@ -41,10 +42,10 @@ public class SearchApi {
      * @param facetRange    the facet range
      * @param searchApiMap  the search api map
      */
-    public SearchApi(String apiKey, String isPublisherId, String query,
-                     String categoryId, String start, String sort, String order,
-                     String numItems, String format, String responseGroup,
-                     String facet, String facetFilter, String facetRange, Map<String, String> searchApiMap) {
+    public SearchApi(final String apiKey, final String isPublisherId, final String query,
+                     final String categoryId, final String start, final String sort, final String order,
+                     final String numItems, final String format, final String responseGroup,
+                     final String facet, final String facetFilter, final String facetRange, final Map<String, String> searchApiMap) {
         this.apiKey = apiKey;
         this.isPublisherId = isPublisherId;
         this.query = query;

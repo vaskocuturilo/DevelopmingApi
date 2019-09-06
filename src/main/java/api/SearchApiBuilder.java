@@ -2,6 +2,7 @@ package api;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static api.Parameters.*;
 
@@ -23,7 +24,7 @@ public class SearchApiBuilder {
     private String facet;
     private String facetFilter;
     private String facetRange;
-    private Map<String, String> searchApiMap = new HashMap<>();
+    private ConcurrentHashMap<String, String> searchApiMap = new ConcurrentHashMap<>();
 
     /**
      * Instantiates a new Search api builder.
@@ -99,7 +100,7 @@ public class SearchApiBuilder {
      * @param order this is order.
      * @return this.
      */
-    public SearchApiBuilder setOrder(String order) {
+    public SearchApiBuilder setOrder(final String order) {
         this.order = order;
         this.searchApiMap.put(ORDER.getParameter(), order);
         return this;
@@ -112,7 +113,7 @@ public class SearchApiBuilder {
      * @param numItems this is numItems.
      * @return this.
      */
-    public SearchApiBuilder setNumItems(String numItems) {
+    public SearchApiBuilder setNumItems(final String numItems) {
         this.numItems = numItems;
         this.searchApiMap.put(NUMBER_OF_ITEMS.getParameter(), numItems);
 
@@ -126,7 +127,7 @@ public class SearchApiBuilder {
      * @param format this is format.
      * @return this.
      */
-    public SearchApiBuilder setFormat(String format) {
+    public SearchApiBuilder setFormat(final String format) {
         this.format = format;
         this.searchApiMap.put(FORMAT.getParameter(), format);
 
@@ -140,7 +141,7 @@ public class SearchApiBuilder {
      * @param responseGroup this is responseGroup.
      * @return this.
      */
-    public SearchApiBuilder setResponseGroup(String responseGroup) {
+    public SearchApiBuilder setResponseGroup(final String responseGroup) {
         this.responseGroup = responseGroup;
         this.searchApiMap.put(RESPONSE_GROUP.getParameter(), responseGroup);
 
@@ -155,7 +156,7 @@ public class SearchApiBuilder {
      * @param facet this is facet.
      * @return this.
      */
-    public SearchApiBuilder setFacet(String facet) {
+    public SearchApiBuilder setFacet(final String facet) {
         this.facet = facet;
         this.searchApiMap.put(FACET.getParameter(), facet);
 
@@ -169,7 +170,7 @@ public class SearchApiBuilder {
      * @param facetFilter this is facet filter.
      * @return this.
      */
-    public SearchApiBuilder setFacetFilter(String facetFilter) {
+    public SearchApiBuilder setFacetFilter(final String facetFilter) {
         this.facetFilter = facetFilter;
         this.searchApiMap.put(FACET_FILTER.getParameter(), facetFilter);
 
@@ -183,7 +184,7 @@ public class SearchApiBuilder {
      * @param facetRange this is facet facet range.
      * @return this.
      */
-    public SearchApiBuilder setFacetRange(String facetRange) {
+    public SearchApiBuilder setFacetRange(final String facetRange) {
         this.facetRange = facetRange;
         this.searchApiMap.put(FACET_RANGE.getParameter(), facetRange);
 

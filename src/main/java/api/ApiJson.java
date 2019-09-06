@@ -18,7 +18,7 @@ public class ApiJson {
     /**
      * The Private value.
      */
-    private String json;
+    private final transient String json;
 
     /**
      * Instantiates a new Api json.
