@@ -17,6 +17,14 @@ public class DataProviders {
      */
     public String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
 
+    /**
+     * Default constructor.
+     */
+    public DataProviders() {
+        super();
+        //empty
+        return;
+    }
 
     /**
      * Search data object [ ] [ ].
@@ -33,10 +41,10 @@ public class DataProviders {
                         .getSearchApiMap(), SortValues.NEW},
 
                 {
-                    new SearchApiBuilder(apiKey, "Shell Scripting")
-                        .setNumItems("3")
-                        .setSort("price")
-                        .build()
-                        .getSearchApiMap(), SortValues.RATING_HIGH}};
+                        new SearchApiBuilder(apiKey, "Shell Scripting")
+                                .setNumItems("3")
+                                .setSort("price")
+                                .build()
+                                .getSearchApiMap(), SortValues.RATING_HIGH}};
     }
 }

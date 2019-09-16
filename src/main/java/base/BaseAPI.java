@@ -19,7 +19,14 @@ public class BaseAPI {
      */
     private final transient String urlString = ResourceBundle.getBundle("test").getString("URL");
 
-
+    /**
+     * Default constructor.
+     */
+    public BaseAPI() {
+        super();
+        //empty
+        return;
+    }
 
     /**
      * Start method.

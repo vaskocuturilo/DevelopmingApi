@@ -32,6 +32,15 @@ public class SearchPage {
     private static final long DELAY = 5000;
 
     /**
+     * Default constructor.
+     */
+    public SearchPage() {
+        super();
+        //empty
+        return;
+    }
+
+    /**
      * Gets product name for items range.
      *
      * @param number the number
