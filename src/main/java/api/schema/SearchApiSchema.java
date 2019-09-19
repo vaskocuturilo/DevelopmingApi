@@ -27,9 +27,14 @@ public class SearchApiSchema {
      * No args constructor for use in serialization
      */
     public SearchApiSchema() {
+        super();
+        //empty
+        return;
     }
 
     /**
+     * Method search api schema.
+     *
      * @param sort
      * @param items
      * @param start

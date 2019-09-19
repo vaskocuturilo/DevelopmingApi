@@ -8,6 +8,9 @@ import static api.Parameters.*;
  */
 public class SearchApiBuilder {
 
+    /**
+     * The type Search api builder.
+     */
     private final String apiKey;
     private final String query;
     private String publisherId;

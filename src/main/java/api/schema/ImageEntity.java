@@ -17,6 +17,9 @@ public class ImageEntity {
      * No args constructor for use in serialization
      */
     public ImageEntity() {
+        super();
+        //empty
+        return;
     }
 
     /**

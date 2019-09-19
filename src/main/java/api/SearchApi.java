@@ -1,4 +1,5 @@
 package api;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -7,23 +8,75 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class SearchApi {
 
+    /**
+     * The private value apiKey.
+     */
     private final String apiKey;
+
+    /**
+     * The private value isPublisherId .
+     */
     private final String isPublisherId;
+
+    /**
+     * The private value query.
+     */
     private final String query;
+
+    /**
+     * The private value categoryId.
+     */
     private final String categoryId;
+
+    /**
+     * The private value start.
+     */
     private final String start;
+    /**
+     * The private value sort.
+     */
     private final String sort;
+    /**
+     * The private value order.
+     */
     private final String order;
+
+    /**
+     * The private value numItems.
+     */
     private final String numItems;
+    /**
+     * The private value format.
+     */
     private final String format;
+
+    /**
+     * The private value responseGroup.
+     */
     private final String responseGroup;
+
+    /**
+     * The private value facet.
+     */
     private final String facet;
+
+    /**
+     * The private value facetFilter.
+     */
     private final String facetFilter;
+
+    /**
+     * The private value facetRange.
+     */
     private final String facetRange;
+
+    /**
+     * The private value searchApiMap.
+     */
     private ConcurrentHashMap<String, String> searchApiMap = new ConcurrentHashMap<>();
 
     /**
-     * Instantiates a new Search api.
+     * Constructor search api.
      *
      * @param apiKey        the api key
      * @param isPublisherId the is publisher id

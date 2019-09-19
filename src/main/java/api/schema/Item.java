@@ -69,9 +69,14 @@ public class Item {
      * No args constructor for use in serialization
      */
     public Item() {
+        super();
+        //empty
+        return;
     }
 
     /**
+     * Constructor Item.
+     *
      * @param freeShippingOver35Dollars
      * @param affiliateAddToCartUrl
      * @param standardShipRate
