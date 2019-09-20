@@ -52,7 +52,7 @@ public class GiftOptions {
         return allowGiftReceipt;
     }
 
-    public void setAllowGiftReceipt(Boolean allowGiftReceipt) {
+    public void setAllowGiftReceipt(final Boolean allowGiftReceipt) {
         this.allowGiftReceipt = allowGiftReceipt;
     }
 }
