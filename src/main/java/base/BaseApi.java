@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 /**
  * The type Base api.
  */
-public class BaseAPI {
+public class BaseApi {
 
     /**
      * The Url string.
@@ -22,7 +22,7 @@ public class BaseAPI {
     /**
      * Default constructor.
      */
-    public BaseAPI() {
+    public BaseApi() {
         super();
         //empty
         return;

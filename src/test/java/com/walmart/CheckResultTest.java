@@ -2,7 +2,7 @@ package com.walmart;
 
 import api.ApiJson;
 import api.Request;
-import base.BaseAPI;
+import base.BaseApi;
 import data.DataProviders;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
@@ -17,7 +17,7 @@ import static org.testng.Assert.assertEquals;
 import static page.SearchPage.getProductNameForItemsRange;
 import static page.SearchPage.getProductPriceForItemsRange;
 
-public class CheckResultTest extends BaseAPI {
+public class CheckResultTest extends BaseApi {
 
     @Test(dataProvider = "insertSearchData", dataProviderClass = DataProviders.class)
     @Story("The search example with api request.")
