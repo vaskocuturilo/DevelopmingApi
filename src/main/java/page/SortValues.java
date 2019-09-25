@@ -40,10 +40,10 @@ public enum SortValues {
     /**
      * Constructor.
      *
-     * @param value this is value.
+     * @param valueData this is value.
      */
-    SortValues(final String value) {
-        this.value = value;
+    SortValues(final String valueData) {
+        this.value = valueData;
     }
 
     /**

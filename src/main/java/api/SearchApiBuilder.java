@@ -1,4 +1,5 @@
 package api;
+
 import java.util.concurrent.ConcurrentHashMap;
 
 import static api.Parameters.*;
@@ -9,33 +10,87 @@ import static api.Parameters.*;
 public class SearchApiBuilder {
 
     /**
-     * The type Search api builder.
+     * The private value apiKey.
      */
     private final String apiKey;
+
+    /**
+     * The private value query.
+     */
     private final String query;
+
+    /**
+     * The private value publisherId.
+     */
     private String publisherId;
+
+    /**
+     * The private value categoryId.
+     */
     private String categoryId;
+
+    /**
+     * The private value start.
+     */
     private String start;
+
+    /**
+     * The private value sort.
+     */
     private String sort;
+
+    /**
+     * The private value order.
+     */
     private String order;
+
+    /**
+     * The private value numItems.
+     */
     private String numItems;
+
+    /**
+     * The private value format.
+     */
     private String format;
+
+    /**
+     * The private value responseGroup.
+     */
     private String responseGroup;
+
+    /**
+     * The private value facet.
+     */
     private String facet;
+
+    /**
+     * The private value facetFilter.
+     */
     private String facetFilter;
+
+    /**
+     * The private value facetRange.
+     */
     private String facetRange;
+
+    /**
+     * The private value searchApiMap.
+     */
     private ConcurrentHashMap<String, String> searchApiMap = new ConcurrentHashMap<>();
 
     /**
      * Instantiates a new Search api builder.
      * For parameters API_KEY and QUERY.
-     *  @param apiKey the api key
-     * @param query  the query*/
-    public SearchApiBuilder(final String apiKey, final String query) {
-        this.apiKey = apiKey;
-        this.searchApiMap.put(API_KEY.getParameter(), apiKey);
-        this.query = query;
-        this.searchApiMap.put(QUERY.getParameter(), query);
+     *
+     * @param apiKeyData the api key
+     * @param queryData  the query
+     */
+    public SearchApiBuilder(final String apiKeyData, final String queryData) {
+        this.apiKey = apiKeyData;
+        this.searchApiMap.put(API_KEY.getParameter(), apiKeyData);
+        this.query = queryData;
+        this.searchApiMap.put(QUERY.getParameter(), queryData);
     }
 
     /**
@@ -193,6 +248,8 @@ public class SearchApiBuilder {
 
     /**
      * Builder build.
+     *
+     * @return new SearchApi.
      */
     public SearchApi build() {
         return new SearchApi(

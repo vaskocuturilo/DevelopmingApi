@@ -15,7 +15,7 @@ public class DataProviders {
     /**
      * The Api key.
      */
-    public String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
+    private String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
 
     /**
      * Default constructor.

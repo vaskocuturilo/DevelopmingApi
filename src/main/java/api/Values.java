@@ -38,10 +38,10 @@ public enum Values {
     /**
      * Constructor Values.
      *
-     * @param value thi is value.
+     * @param valueData thi is value.
      */
-    Values(final String value) {
-        this.value = value;
+    Values(final String valueData) {
+        this.value = valueData;
     }
 
     /**

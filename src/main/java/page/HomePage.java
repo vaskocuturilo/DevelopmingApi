@@ -15,6 +15,9 @@ public class HomePage {
      */
     private final transient SelenideElement headerSearchField = $("input[id='global-search-input']");
 
+    /**
+     * Default constructor.
+     */
     public HomePage() {
         super();
         //empty

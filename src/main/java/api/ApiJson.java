@@ -23,10 +23,10 @@ public class ApiJson {
     /**
      * Instantiates a new Api json.
      *
-     * @param json the json
+     * @param jsonData the json
      */
-    public ApiJson(final String json) {
-        this.json = json;
+    public ApiJson(final String jsonData) {
+        this.json = jsonData;
     }
 
     /**

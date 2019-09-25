@@ -67,10 +67,10 @@ public enum Parameters {
     /**
      * Default Constructor.
      *
-     * @param parameter thi is parameter.
+     * @param parameterData thi is parameter.
      */
-    Parameters(final String parameter) {
-        this.parameter = parameter;
+    Parameters(final String parameterData) {
+        this.parameter = parameterData;
     }
 
     /**
