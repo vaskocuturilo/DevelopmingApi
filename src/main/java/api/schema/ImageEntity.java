@@ -28,7 +28,7 @@ public class ImageEntity {
      * @param entityType
      * @param thumbnailImage
      */
-    public ImageEntity(String thumbnailImage, String mediumImage, String largeImage, String entityType) {
+    public ImageEntity(final String thumbnailImage, final String mediumImage, final String largeImage, final String entityType) {
         super();
         this.thumbnailImage = thumbnailImage;
         this.mediumImage = mediumImage;
