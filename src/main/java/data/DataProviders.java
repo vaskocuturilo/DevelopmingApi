@@ -35,13 +35,13 @@ public class DataProviders {
     @DataProvider
     public Object[][] insertSearchData() {
         return new Object[][]{{
-                new SearchApiBuilder(apiKey, "Linux books")
+                new SearchApiBuilder(apiKey, "Shell scripting")
                         .setNumItems("3")
                         .build()
                         .getSearchApiMap(), SortValues.NEW},
 
                 {
-                        new SearchApiBuilder(apiKey, "Sport car")
+                        new SearchApiBuilder(apiKey, "Shell scripting")
                                 .setNumItems("3")
                                 .setSort("price")
                                 .build()
