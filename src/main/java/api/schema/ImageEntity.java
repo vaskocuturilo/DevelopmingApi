@@ -40,7 +40,7 @@ public class ImageEntity {
         return thumbnailImage;
     }
 
-    public void setThumbnailImage(String thumbnailImage) {
+    public void setThumbnailImage(final String thumbnailImage) {
         this.thumbnailImage = thumbnailImage;
     }
 
@@ -48,7 +48,7 @@ public class ImageEntity {
         return mediumImage;
     }
 
-    public void setMediumImage(String mediumImage) {
+    public void setMediumImage(final String mediumImage) {
         this.mediumImage = mediumImage;
     }
 
@@ -56,7 +56,7 @@ public class ImageEntity {
         return largeImage;
     }
 
-    public void setLargeImage(String largeImage) {
+    public void setLargeImage(final String largeImage) {
         this.largeImage = largeImage;
     }
 
@@ -64,7 +64,7 @@ public class ImageEntity {
         return entityType;
     }
 
-    public void setEntityType(String entityType) {
+    public void setEntityType(final String entityType) {
         this.entityType = entityType;
     }
 
