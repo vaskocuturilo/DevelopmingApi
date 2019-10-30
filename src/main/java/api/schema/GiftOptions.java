@@ -4,14 +4,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 /**
- * The type Gift options.
+ * The class Gift options.
  */
 public class GiftOptions {
 
+    /**
+     * The private value.
+     */
     @JsonProperty("allowGiftWrap")
     private Boolean allowGiftWrap;
+
+    /**
+     * The private value.
+     */
     @JsonProperty("allowGiftMessage")
     private Boolean allowGiftMessage;
+
+    /**
+     * The private value.
+     */
     @JsonProperty("allowGiftReceipt")
     private Boolean allowGiftReceipt;
 
