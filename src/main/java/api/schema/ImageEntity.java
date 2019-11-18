@@ -2,6 +2,9 @@ package api.schema;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * The class Image entity.
+ */
 public class ImageEntity {
 
     @JsonProperty("thumbnailImage")
@@ -14,7 +17,7 @@ public class ImageEntity {
     private String entityType;
 
     /**
-     * No args constructor for use in serialization
+     * Default constructor.
      */
     public ImageEntity() {
         super();
@@ -23,10 +26,12 @@ public class ImageEntity {
     }
 
     /**
-     * @param mediumImage
-     * @param largeImage
-     * @param entityType
-     * @param thumbnailImage
+     * Instantiates a new Image entity.
+     *
+     * @param thumbnailImage the thumbnail image
+     * @param mediumImage    the medium image
+     * @param largeImage     the large image
+     * @param entityType     the entity type
      */
     public ImageEntity(final String thumbnailImage, final String mediumImage, final String largeImage, final String entityType) {
         super();
@@ -36,34 +41,74 @@ public class ImageEntity {
         this.entityType = entityType;
     }
 
+    /**
+     * Gets thumbnail image.
+     *
+     * @return the thumbnail image
+     */
     public String getThumbnailImage() {
         return thumbnailImage;
     }
 
+    /**
+     * Sets thumbnail image.
+     *
+     * @param thumbnailImage the thumbnail image
+     */
     public void setThumbnailImage(final String thumbnailImage) {
         this.thumbnailImage = thumbnailImage;
     }
 
+    /**
+     * Gets medium image.
+     *
+     * @return the medium image
+     */
     public String getMediumImage() {
         return mediumImage;
     }
 
+    /**
+     * Sets medium image.
+     *
+     * @param mediumImage the medium image
+     */
     public void setMediumImage(final String mediumImage) {
         this.mediumImage = mediumImage;
     }
 
+    /**
+     * Gets large image.
+     *
+     * @return the large image
+     */
     public String getLargeImage() {
         return largeImage;
     }
 
+    /**
+     * Sets large image.
+     *
+     * @param largeImage the large image
+     */
     public void setLargeImage(final String largeImage) {
         this.largeImage = largeImage;
     }
 
+    /**
+     * Gets entity type.
+     *
+     * @return the entity type
+     */
     public String getEntityType() {
         return entityType;
     }
 
+    /**
+     * Sets entity type.
+     *
+     * @param entityType the entity type
+     */
     public void setEntityType(final String entityType) {
         this.entityType = entityType;
     }
