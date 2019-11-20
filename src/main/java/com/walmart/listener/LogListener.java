@@ -1,4 +1,4 @@
-package listener;
+package com.walmart.listener;
 
 import io.qameta.allure.Attachment;
 import io.restassured.RestAssured;

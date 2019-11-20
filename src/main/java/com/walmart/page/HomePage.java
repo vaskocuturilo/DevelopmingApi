@@ -1,4 +1,4 @@
-package page;
+package com.walmart.page;
 
 import com.codeborne.selenide.SelenideElement;
 
@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 
 /**
- * The type Home page.
+ * The type Home com.walmart.page.
  */
 public class HomePage {
 
@@ -25,10 +25,10 @@ public class HomePage {
     }
 
     /**
-     * Enter text to search field search page.
+     * Enter text to search field search com.walmart.page.
      *
      * @param text the text
-     * @return the search page
+     * @return the search com.walmart.page
      */
     public SearchPage enterTextToSearchField(final String text) {
         headerSearchField.setValue(text).pressEnter();

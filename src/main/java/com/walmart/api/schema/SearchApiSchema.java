@@ -1,4 +1,4 @@
-package api.schema;
+package com.walmart.api.schema;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -33,7 +33,7 @@ public class SearchApiSchema {
     }
 
     /**
-     * Method search api schema.
+     * Method search com.walmart.api schema.
      *
      * @param sort
      * @param items

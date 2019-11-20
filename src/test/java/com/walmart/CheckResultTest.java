@@ -1,26 +1,26 @@
 package com.walmart;
 
-import api.ApiJson;
-import api.Request;
-import base.BaseApi;
-import data.DataProviders;
+import com.walmart.api.ApiJson;
+import com.walmart.api.Request;
+import com.walmart.base.BaseApi;
+import com.walmart.data.DataProviders;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-import page.HomePage;
-import page.SortValues;
+import com.walmart.page.HomePage;
+import com.walmart.page.SortValues;
 
 import java.util.Map;
 
-import static api.Parameters.NUMBER_OF_ITEMS;
-import static api.Parameters.QUERY;
+import static com.walmart.api.Parameters.NUMBER_OF_ITEMS;
+import static com.walmart.api.Parameters.QUERY;
 import static org.testng.Assert.assertEquals;
-import static page.SearchPage.getProductNameForItemsRange;
-import static page.SearchPage.getProductPriceForItemsRange;
+import static com.walmart.page.SearchPage.getProductNameForItemsRange;
+import static com.walmart.page.SearchPage.getProductPriceForItemsRange;
 
 public class CheckResultTest extends BaseApi {
 
     @Test(dataProvider = "insertSearchData", dataProviderClass = DataProviders.class)
-    @Story("The search example with api request.")
+    @Story("The search example with com.walmart.api request.")
     public void searchWithApiRequest(Map<String, String> queryMap, SortValues sortValues) {
 
         ApiJson searchResultsApiJson = Request.makeRequest(queryMap);

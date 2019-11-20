@@ -1,4 +1,4 @@
-package api.schema;
+package com.walmart.api.schema;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package api;
+package com.walmart.api;
 
 /**
  * The enum Values.

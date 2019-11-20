@@ -1,4 +1,4 @@
-package api;
+package com.walmart.api;
 
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -25,10 +25,10 @@ public final class Request {
     }
 
     /**
-     * Make request api json.
+     * Make request com.walmart.api json.
      *
      * @param query the query
-     * @return the api json
+     * @return the com.walmart.api json
      */
     public static ApiJson makeRequest(final Map<String, String> query) {
         final String json = given()

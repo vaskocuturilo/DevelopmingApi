@@ -1,8 +1,8 @@
-package data;
+package com.walmart.data;
 
-import api.SearchApiBuilder;
+import com.walmart.api.SearchApiBuilder;
 import org.testng.annotations.DataProvider;
-import page.SortValues;
+import com.walmart.page.SortValues;
 
 import java.util.ResourceBundle;
 
@@ -15,7 +15,7 @@ public class DataProviders {
     /**
      * The Api key.
      */
-    private String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
+    private String apiKey = ResourceBundle.getBundle("com/walmart/api").getString("API_KEY");
 
     /**
      * Default constructor.
@@ -27,7 +27,7 @@ public class DataProviders {
     }
 
     /**
-     * Search data object [ ] [ ].
+     * Search com.walmart.data object [ ] [ ].
      *
      * @return the object [ ] [ ]
      */

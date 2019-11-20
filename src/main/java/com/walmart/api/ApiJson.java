@@ -1,6 +1,6 @@
-package api;
+package com.walmart.api;
 
-import api.schema.Item;
+import com.walmart.api.schema.Item;
 import groovy.json.JsonException;
 import io.restassured.path.json.JsonPath;
 

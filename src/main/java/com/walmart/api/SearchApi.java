@@ -1,10 +1,10 @@
-package api;
+package com.walmart.api;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * The type Search api.
+ * The type Search com.walmart.api.
  */
 public class SearchApi {
 
@@ -76,9 +76,9 @@ public class SearchApi {
     private ConcurrentHashMap<String, String> searchApiMap = new ConcurrentHashMap<>();
 
     /**
-     * Constructor search api.
+     * Constructor search com.walmart.api.
      *
-     * @param apiKey        the api key
+     * @param apiKey        the com.walmart.api key
      * @param isPublisherId the is publisher id
      * @param query         the query
      * @param categoryId    the category id
@@ -91,7 +91,7 @@ public class SearchApi {
      * @param facet         the facet
      * @param facetFilter   the facet filter
      * @param facetRange    the facet range
-     * @param searchApiMap  the search api map
+     * @param searchApiMap  the search com.walmart.api map
      */
     public SearchApi(final String apiKey, final String isPublisherId, final String query,
                      final String categoryId, final String start, final String sort, final String order,
@@ -115,9 +115,9 @@ public class SearchApi {
     }
 
     /**
-     * Gets search api map.
+     * Gets search com.walmart.api map.
      *
-     * @return the search api map
+     * @return the search com.walmart.api map
      */
     public Map<String, String> getSearchApiMap() {
         return searchApiMap;

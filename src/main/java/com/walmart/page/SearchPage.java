@@ -1,4 +1,4 @@
-package page;
+package com.walmart.page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 /**
- * The type Search page.
+ * The type Search com.walmart.page.
  */
 public class SearchPage {
 
@@ -61,10 +61,10 @@ public class SearchPage {
     }
 
     /**
-     * Method select sort by search page.
+     * Method select sort by search com.walmart.page.
      *
      * @param sortType the sort type.
-     * @return the search page.
+     * @return the search com.walmart.page.
      */
     public SearchPage selectSortBy(final SortValues sortType) {
         if (!sortType.equals(SortValues.NEW)) {

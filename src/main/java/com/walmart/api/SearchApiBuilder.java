@@ -1,11 +1,11 @@
-package api;
+package com.walmart.api;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-import static api.Parameters.*;
+import static com.walmart.api.Parameters.*;
 
 /**
- * The type Search api builder.
+ * The type Search com.walmart.api builder.
  */
 public class SearchApiBuilder {
 
@@ -80,10 +80,10 @@ public class SearchApiBuilder {
     private ConcurrentHashMap<String, String> searchApiMap = new ConcurrentHashMap<>();
 
     /**
-     * Instantiates a new Search api builder.
+     * Instantiates a new Search com.walmart.api builder.
      * For parameters API_KEY and QUERY.
      *
-     * @param apiKeyData the api key
+     * @param apiKeyData the com.walmart.api key
      * @param queryData  the query
      */
     public SearchApiBuilder(final String apiKeyData, final String queryData) {

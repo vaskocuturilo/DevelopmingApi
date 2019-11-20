@@ -1,7 +1,7 @@
-package base;
+package com.walmart.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import listener.LogListener;
+import com.walmart.listener.LogListener;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 /**
- * The type Base api.
+ * The type Base com.walmart.api.
  */
 
 @Listeners(LogListener.class)
