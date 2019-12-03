@@ -1,3 +1,6 @@
+group 'com.walmart'
+version '1.0'
+
 buildscript {
     repositories {
         jcenter()
@@ -6,11 +9,6 @@ buildscript {
     dependencies {
         classpath "io.qameta.allure:allure-gradle:2.5"
     }
-}
-
-
-plugins {
-    id 'java'
 }
 
 apply plugin: 'io.qameta.allure'
@@ -45,6 +43,7 @@ dependencies {
     compile group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.7.0'
     compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.7.0'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.1'
+    compile group: 'javax.xml', name: 'jaxb-api', version: '2.1'
     testCompile group: 'org.slf4j', name: 'slf4j-nop', version: '1.8.0-beta2'
 
 

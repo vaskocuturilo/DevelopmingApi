@@ -28,7 +28,7 @@ public class HomePage {
      * Enter text to search field search com.walmart.page.
      *
      * @param text the text
-     * @return the search com.walmart.page
+     * @return the search
      */
     public SearchPage enterTextToSearchField(final String text) {
         headerSearchField.setValue(text).pressEnter();

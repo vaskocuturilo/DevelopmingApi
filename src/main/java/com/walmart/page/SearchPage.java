@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 /**
- * The type Search com.walmart.page.
+ * The class SearchPage.
  */
 public class SearchPage {
 
@@ -64,7 +64,7 @@ public class SearchPage {
      * Method select sort by search com.walmart.page.
      *
      * @param sortType the sort type.
-     * @return the search com.walmart.page.
+     * @return this.
      */
     public SearchPage selectSortBy(final SortValues sortType) {
         if (!sortType.equals(SortValues.NEW)) {

@@ -15,7 +15,7 @@ public class DataProviders {
     /**
      * The Api key.
      */
-    private String apiKey = ResourceBundle.getBundle("com/walmart/api").getString("API_KEY");
+    private String apiKey = ResourceBundle.getBundle("api").getString("API_KEY");
 
     /**
      * Default constructor.

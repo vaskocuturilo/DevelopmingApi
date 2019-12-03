@@ -12,10 +12,9 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 /**
- * The type Base com.walmart.api.
+ * The class base api.
  */
 
-@Listeners(LogListener.class)
 public class BaseApi {
 
     /**
@@ -37,7 +36,7 @@ public class BaseApi {
      */
     @BeforeTest
     public void startMethod() {
-        WebDriverManager.chromedriver().version("76.0.3809.68").setup();
+        WebDriverManager.chromedriver().version("78").setup();
         open(urlString);
     }
 

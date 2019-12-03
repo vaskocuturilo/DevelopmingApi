@@ -20,7 +20,7 @@ import static com.walmart.page.SearchPage.getProductPriceForItemsRange;
 public class CheckResultTest extends BaseApi {
 
     @Test(dataProvider = "insertSearchData", dataProviderClass = DataProviders.class)
-    @Story("The search example with com.walmart.api request.")
+    @Story("The search example with api request.")
     public void searchWithApiRequest(Map<String, String> queryMap, SortValues sortValues) {
 
         ApiJson searchResultsApiJson = Request.makeRequest(queryMap);

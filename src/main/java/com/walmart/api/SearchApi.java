@@ -115,9 +115,9 @@ public class SearchApi {
     }
 
     /**
-     * Gets search com.walmart.api map.
+     * Gets search api map.
      *
-     * @return the search com.walmart.api map
+     * @return the searchApiMap.
      */
     public Map<String, String> getSearchApiMap() {
         return searchApiMap;
