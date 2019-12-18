@@ -1,10 +1,8 @@
 package com.walmart.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import com.walmart.listener.LogListener;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
 
 import java.util.ResourceBundle;
 
@@ -14,7 +12,6 @@ import static com.codeborne.selenide.Selenide.*;
 /**
  * The class base api.
  */
-
 public class BaseApi {
 
     /**
